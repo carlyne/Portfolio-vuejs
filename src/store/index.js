@@ -5,46 +5,49 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    project : [
+    galleryItems : [
       {
         id: 1,
-        title: "Projet 1"
-      }, 
+        category: 'projet',
+        title: 'projet 01'
+      },
       {
         id: 2,
-        title: "Projet 2"
-      } 
-    ],
-
-    illus : [
+        category: 'illus',
+        title: 'illus 01'
+      },
       {
         id: 3,
-        title: "illus 1"
-      }
-    ],
-
-    experiment : []
+        category: 'projet',
+        title: 'projet 02'
+      },
+      {
+        id: 4,
+        category: 'experimentation',
+        title: 'experimentation 01'
+      },
+      {
+        id: 5,
+        category: 'projet',
+        title: 'projet 03'
+      },
+      {
+        id: 6,
+        category: 'illus',
+        title: 'illus 02'
+      },
+      {
+        id: 7,
+        category: 'experimentation',
+        title: 'experimentation 02'
+      },
+      {
+        id: 8,
+        category: 'projet',
+        title: 'projet 04'
+      },
+    ]
   },
-
-  getters: {
-    getProjectLength : state => {
-      return state.project.length;
-    },
-    getIllusLenght : state => {
-      return state.illus.length;
-    },
-    getExperimentLength : state => {
-      return state.experiment.length;
-    },
-    getAllElements: state => {
-      return [].concat(state.project, state.illus, state.experiment);
-    },
-
-    getTotalLength : (state, getters)=> {
-      return getters.getProjectLength + getters.getIllusLenght + getters.getExperimentLength;
-    }
-  },
-  
   mutations: {
   },
   actions: {

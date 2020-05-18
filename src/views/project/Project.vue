@@ -17,16 +17,16 @@ export default {
     },
 
     mounted()  {
-        for(let item in this.project) {
-            if (this.project[item].id == this.$route.params.id) {
-                return this.currentProject = this.project[item];
+        for(let item in this.galleryItems) {
+            if (this.galleryItems[item].id == this.$route.params.id) {
+                return this.currentProject = this.galleryItems[item];
             }
         }
     },
 
     computed: {
-        ...mapState(['project']),
+        ...mapState(['galleryItems']),
     }
 
 }
-</script>
+</script>s

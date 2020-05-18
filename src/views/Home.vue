@@ -1,27 +1,17 @@
 <template>
   <div class="home">
-    <h1>Home page</h1>
-
     <main class="container d-grid resp">
-      <AppCard v-for="item in getAllElements" :key="item.id" :galleryItem="item"></AppCard>
+      <AppCard v-for="galleryItem in $store.state.galleryItems" :key="galleryItem.id" :galleryItem="galleryItem"></AppCard>
     </main>
     
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import { mapGetters } from 'vuex';
-import AppCard from '../components/app-card/AppCard.vue';
-
+import AppCard from '../components/app-card/AppCard.vue'; 
 
 export default {
   name: 'Home',
-
-  computed: {
-    ...mapState(['project', 'illustration', "experiment"]),
-    ...mapGetters(['getTotalLength', 'getAllElements'])
-  },
 
   components: {
     AppCard

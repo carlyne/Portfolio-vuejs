@@ -1,7 +1,7 @@
 <template>
     <article id="app-card" class="content-box space-out gallery">
         <h1>{{ galleryItem }}</h1>
-       <router-link :to="'project/' + galleryItem.id ">Voir +</router-link>
+       <router-link :to="path + galleryItem.id ">Voir +</router-link>
     </article>
 </template>
 
@@ -12,15 +12,24 @@
 </style>
 
 <script>
-import { mapState } from 'vuex';
-
 export default {
-    name: "app-card",   
-
+    name: "app-card",
+    data: function() {
+        return {
+            path: ""
+        }
+    },
+   
     props: ['galleryItem'],
 
-    computed: {
-        ...mapState(['project'])
+    mounted () {
+        if (this.galleryItem.category == "projet") {
+            return this.path = "project/";
+        } else if (this.galleryItem.category == "illus"){
+            return this.path = "illus/";
+        } else {
+            return this.path = "experimentation/";
+        }
     }
 }
 </script>
