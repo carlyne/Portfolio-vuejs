@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
+import Project from '../views/project/Project.vue';
 
 Vue.use(VueRouter)
 
@@ -16,10 +17,14 @@ Vue.use(VueRouter)
     name: 'About',
     component: About
   },
+  {
+    path: '/project/:id',
+    component: Project
+  },
 ]
 
 const router = new VueRouter({
   routes
 })
 
-export default router
+export default router;

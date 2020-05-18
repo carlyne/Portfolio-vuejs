@@ -67,7 +67,6 @@ img {
 .container {
     width: 100%;
     margin: 0 auto $big-spacing-in;
-    border: 1px solid red;
     position: relative;
 
     &.custom {
@@ -158,6 +157,14 @@ img {
 
     &.space-none {
         padding: 0;
+    }
+
+    &.space-out {
+        margin: 10px 0;
+        @media (min-width: $screen-med-w){
+            margin: 10px;
+            width: calc(100% - 20px);
+        }
     }
 
 }
@@ -312,5 +319,3 @@ img {
     -webkit-justify-content: space-around;
     -ms-justify-content: space-around;
 }
-
-@import './components/components-style';

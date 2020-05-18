@@ -1,7 +1,15 @@
 <template>
   <div class="home">
     <h1>Home page</h1>
-    <AppCard></AppCard>
+
+    <main class="container d-grid resp">
+      <router-link to="/project/01" ><AppCard></AppCard></router-link>
+      <AppCard></AppCard>
+      <AppCard></AppCard>
+      <AppCard></AppCard>
+      <AppCard></AppCard>
+    </main>
+    
   </div>
 </template>
 
