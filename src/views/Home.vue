@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <h1>Home page</h1>
-    <p>{{ getTotalLength }}</p>
 
     <main class="container d-grid resp">
       <AppCard v-for="item in getAllElements" :key="item.id" :galleryItem="item"></AppCard>

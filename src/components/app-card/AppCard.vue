@@ -1,7 +1,7 @@
 <template>
     <article id="app-card" class="content-box space-out gallery">
         <h1>{{ galleryItem }}</h1>
-       <router-link :to="'project/' + galleryItem.id "><p>element</p></router-link>
+       <router-link :to="'project/' + galleryItem.id ">Voir +</router-link>
     </article>
 </template>
 
