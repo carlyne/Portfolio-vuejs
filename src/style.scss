@@ -47,10 +47,19 @@ a{
 }
 
 img {
-    width: auto;
-    height: $full-w;
+
     margin: 0;
     padding: 0;
+
+    &.row-logo {
+        width: auto;
+        height: 100%;
+    }
+
+    &.col-logo {
+        width: 100%;
+        height: auto;
+    }
 }
 
 
@@ -96,7 +105,7 @@ img {
     &.col {
         @media (min-width: $screen-med-w) {
             min-height: 100vh;
-            flex-direction: row;
+            flex-direction: column;
             -webkit-box-flex-direction: row;
             -webkit-flex-direction: row;
             -ms-flex-direction: row;
@@ -120,6 +129,7 @@ img {
 
     & li {
         padding: $list-item-padding;
+        display: block;
     }
 
     & a {
@@ -132,10 +142,6 @@ img {
 
     &.list-row li{
         display: inline-block;
-    }
-
-    &.list-col li{
-        display: block;
     }
 
     @media (min-width: $screen-med-w) {
@@ -158,6 +164,19 @@ img {
 
 
 /*** Modifier Classes*/
+
+.d-none-s {
+    @media (min-width: $screen-med-w) {
+        display: none;
+    }
+}
+
+.d-none-m {
+    display: none;
+    @media (min-width: $screen-med-w) {
+        display: block;
+    }
+}
 
 /* Sizes */ 
 .full-w {
@@ -278,5 +297,20 @@ img {
     -ms-justify-content: space-between;
 }
 
+.d-around-s {
+    @media (min-width: $screen-med-w) {
+        justify-content: space-around;
+        -webkit-box-justify-content: space-around;
+        -webkit-justify-content: space-around;
+        -ms-justify-content: space-around;
+    }
+}
+
+.d-around-m {
+    justify-content: space-around;
+    -webkit-box-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -ms-justify-content: space-around;
+}
+
 @import './components/components-style';
-@import './views/views-style';

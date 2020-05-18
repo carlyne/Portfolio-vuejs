@@ -1,0 +1,13 @@
+@import '../../style';
+
+#app {
+    width: $full-w;
+    margin-left: 0;
+    margin-top: $navbar-h;
+
+    @media (min-width: $screen-med-w) {
+    margin-left: 25%;
+    margin-top: 0;
+    width: 75%;
+    }
+}
