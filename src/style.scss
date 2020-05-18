@@ -163,10 +163,14 @@ img {
         margin: 10px 0;
         @media (min-width: $screen-med-w){
             margin: 10px;
-            width: calc(100% - 20px);
+        }
+
+        &.gallery {
+            @media (min-width: $screen-med-w){
+                width: calc((100% / 4) - 20px);
+            }
         }
     }
-
 }
 
 

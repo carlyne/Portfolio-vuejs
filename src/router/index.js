@@ -19,7 +19,8 @@ Vue.use(VueRouter)
   },
   {
     path: '/project/:id',
-    component: Project
+    component: Project,
+    name: "route-project"
   },
 ]
 
