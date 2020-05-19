@@ -1,28 +1,27 @@
 <template>
-    <article v-bind:style="styleObj" id="app-card" class="content-box space-out gallery">
-        <p>{{ galleryItem }}</p>
-       <router-link :to="path + galleryItem.id ">Voir +</router-link>
+        <article v-bind:style="styleObj" class="content-box space-out gallery" v-bind:class="[isHovering ? 'hover-on' : 'hover-off']" v-on:mouseover="mouseOver" v-on:mouseleave="mouseLeave">
+            <p @click="tetest">{{ galleryItem.title }}</p>
+       <router-link :to="path + galleryItem.id" >Voir +</router-link>
     </article>
 </template>
 
-<style>
-#app-card {
-    border: 1px solid #222;
-    height: 200px;
-}   
+<style lang="scss">
+    @import url('./_app-card.scss');
 </style>
 
 <script>
 export default {
     name: "app-card",
+
     data: function() {
         return {
             path: "",
             styleObj : {
-                background: 'url(' + "'" + this.galleryItem.srcImg + "'" + ')',
+                backgroundImage: 'url(' + "'" + this.galleryItem.srcImg + "'" + ')',
                 backgroundSize: 'cover',
                 backgroundPosition: 'top center'
-            }
+            },
+            isHovering: false
         }
     },
    
@@ -36,6 +35,21 @@ export default {
         } else {
             return this.path = "experimentation/";
         }
+    },
+
+    methods: {
+        mouseOver: function() {
+            console.log('active');
+            this.isHovering = true;
+        },    
+        mouseLeave: function(){
+            console.log('not-active');
+            this.isHovering = false;
+        },
+        tetest: function() {
+            console.log('click');
+        }
     }
 }
 </script>
+

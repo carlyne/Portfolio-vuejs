@@ -46,5 +46,35 @@
         "category": "projet",
         "title": "projet 04",
         "srcImg" : "https://i.postimg.cc/yNM9ph4Y/etiquette.jpg"
+        },
+        {
+        "id": 9,
+        "category": "illus",
+        "title": "illus 03",
+        "srcImg" : "https://i.postimg.cc/tJ5xgL1Y/02.jpg"
+        },
+        {
+        "id": 10,
+        "category": "experimentation",
+        "title": "experimentation 03",
+        "srcImg": "https://i.postimg.cc/qMJKFMYn/01.jpg"
+        },
+        {
+        "id": 11,
+        "category": "illus",
+        "title": "illus 04",
+        "srcImg" : "https://i.postimg.cc/tJ5xgL1Y/02.jpg"
+        },
+        {
+        "id": 12,
+        "category": "projet",
+        "title": "projet 05",
+        "srcImg" : "https://i.postimg.cc/yNM9ph4Y/etiquette.jpg"
+        },
+        {
+        "id": 13,
+        "category": "experimentation",
+        "title": "experimentation 04",
+        "srcImg": "https://i.postimg.cc/qMJKFMYn/01.jpg"
         }
 ]

@@ -1,0 +1,21 @@
+article.content-box {
+    border: 1px solid #222;
+    height: 200px;
+
+    &.hover-on {
+        border: 8px solid #222;
+        background: transparent !important;
+
+        & p {
+            font-size: 3rem;
+        }
+    }
+
+    &.hover-off {
+        border: 1px solid #222;
+
+        & p {
+            display: none;
+        }
+    }
+}
