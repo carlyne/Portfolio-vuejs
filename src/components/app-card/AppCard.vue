@@ -29,8 +29,6 @@ export default {
     props: ['galleryItem'],
 
     mounted () {
-        console.log(this.styleObj.background);
-        
         if (this.galleryItem.category == "projet") {
             return this.path = "project/";
         } else if (this.galleryItem.category == "illus"){
