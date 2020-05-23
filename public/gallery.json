@@ -20,7 +20,7 @@
         {
         "id": 4,
         "category": "experimentation",
-        "title": "experimentation 01",
+        "title": "lab 01",
         "srcImg": "https://i.postimg.cc/qMJKFMYn/01.jpg"
         },
         {
@@ -38,7 +38,7 @@
         {
         "id": 7,
         "category": "experimentation",
-        "title": "experimentation 02",
+        "title": "lab 02",
         "srcImg": "https://i.postimg.cc/qMJKFMYn/01.jpg"
         },
         {
@@ -56,7 +56,7 @@
         {
         "id": 10,
         "category": "experimentation",
-        "title": "experimentation 03",
+        "title": "lab 03",
         "srcImg": "https://i.postimg.cc/qMJKFMYn/01.jpg"
         },
         {
@@ -74,7 +74,7 @@
         {
         "id": 13,
         "category": "experimentation",
-        "title": "experimentation 04",
+        "title": "lab 04",
         "srcImg": "https://i.postimg.cc/qMJKFMYn/01.jpg"
         }
 ]

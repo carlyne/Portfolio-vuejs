@@ -1,7 +1,6 @@
 <template>
         <article v-bind:style="styleObj" class="content-box space-out gallery" v-bind:class="[isHovering ? 'hover-on' : 'hover-off']" v-on:mouseover="mouseOver" v-on:mouseleave="mouseLeave">
-            <p @click="tetest">{{ galleryItem.title }}</p>
-       <router-link :to="path + galleryItem.id" >Voir +</router-link>
+            <router-link :to="path + galleryItem.id" tag="h2">{{ galleryItem.title }}</router-link>
     </article>
 </template>
 
@@ -24,7 +23,7 @@ export default {
             isHovering: false
         }
     },
-   
+
     props: ['galleryItem'],
 
     mounted () {
@@ -45,9 +44,6 @@ export default {
         mouseLeave: function(){
             console.log('not-active');
             this.isHovering = false;
-        },
-        tetest: function() {
-            console.log('click');
         }
     }
 }
