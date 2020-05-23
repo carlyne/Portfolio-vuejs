@@ -1,5 +1,5 @@
 <template>
-        <article v-bind:style="styleObj" class="content-box space-out gallery" v-bind:class="[isHovering ? 'hover-on' : 'hover-off']" v-on:mouseover="mouseOver" v-on:mouseleave="mouseLeave">
+        <article v-bind:style="styleObj" class="content-box space-out gallery">
             <router-link :to="path + galleryItem.id" tag="h2">{{ galleryItem.title }}</router-link>
     </article>
 </template>
@@ -16,9 +16,11 @@ export default {
         return {
             path: "",
             styleObj : {
+                backgroundColor: 'aquamarine',
                 backgroundImage: 'url(' + "'" + this.galleryItem.srcImg + "'" + ')',
                 backgroundSize: 'cover',
-                backgroundPosition: 'top center'
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
             },
             isHovering: false
         }
@@ -33,17 +35,6 @@ export default {
             return this.path = "illus/";
         } else {
             return this.path = "experimentation/";
-        }
-    },
-
-    methods: {
-        mouseOver: function() {
-            console.log('active');
-            this.isHovering = true;
-        },    
-        mouseLeave: function(){
-            console.log('not-active');
-            this.isHovering = false;
         }
     }
 }
